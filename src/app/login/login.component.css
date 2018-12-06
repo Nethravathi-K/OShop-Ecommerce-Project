@@ -1,0 +1,16 @@
+.login-form{
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background-color: #eda407;
+}
+.login-img{
+    background-image: url('../../assets/img/login-img.jpg');
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}

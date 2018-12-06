@@ -1,0 +1,60 @@
+<p>
+    <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+</p>
+
+<p>
+    <input 
+    #query
+    (keyup)="filter(query.value)"
+    class="form-control"
+    type="text"
+    id="search-product"
+    placeholder="Filter by name...">
+</p>
+
+
+    <div class="row border-bottom border-300">
+        <div class="col-7">
+          <div class="row">
+            <div class="col-auto">
+              <a href="#"><span class="fas fa-times fs-0 fs-md-1 fs-lg-2 invisible"></span></a>
+            </div>
+            <div class="col">
+              <h6 class="fs--1 ls text-uppercase">Title</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-6 text-center">
+              <h6 class="fs--1 ls text-uppercase">Price</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center py-3 border-bottom border-300" *ngFor=" let p of filteredProducts " >
+          <div class="col-sm-7">
+            <div class="row align-items-center">
+              <div class="col">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-8 mt-2">
+                      <h5 class="font-weight-bold mb-0">{{p.title}}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5 mt-4 mt-sm-0">
+            <div class="row align-items-center justify-content-end">
+              <div class="col-3 col-sm-6 text-right text-sm-center">
+                <div class="form-group mb-0">
+                    <h6 class="fs-0 font-weight-normal mb-0">{{p.price | currency:'USD'}}</h6>
+                </div>
+              </div>
+              <div class="col-3 col-sm-6 text-right ">
+                    <a [routerLink]="['/admin/products/', p.key]">Edit</a>
+              </div>
+            </div>
+          </div>
+        </div>

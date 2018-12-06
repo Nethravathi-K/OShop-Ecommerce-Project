@@ -1,0 +1,17 @@
+.card{
+    margin-bottom: 30px;
+    border: none;
+}
+.card-footer{
+    padding:0;
+    outline: none!important;
+    border: none!important;
+}
+.fa.fa-shopping-cart{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.btn{
+    border-radius:2.25rem;
+}
